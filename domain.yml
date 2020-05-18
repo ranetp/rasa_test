@@ -1,0 +1,191 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- inform
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- asks_help
+- asks_about_main_activity
+- asks_about_location_type
+- request_registration:
+    use_entities: []
+
+entities:
+- company_name
+- company_country
+- company_address
+- company_num_food_locations
+- food_place_name
+- food_place_country
+- food_place_team_size
+- food_place_main_activity
+- food_place_type_of_location
+- food_place_additional_activities
+
+slots:
+  company_address:
+    type: unfeaturized
+    auto_fill: false
+  company_country:
+    type: unfeaturized
+    auto_fill: false
+  company_name:
+    type: unfeaturized
+    auto_fill: false
+  company_num_food_locations:
+    type: categorical
+    auto_fill: false
+    values:
+      - 1to3
+      - 3to5
+      - over5
+  food_place_additional_activities:
+    type: categorical
+    auto_fill: false
+    values:
+      - catering
+      - takeaway
+  food_place_country:
+    type: unfeaturized
+    auto_fill: false
+  food_place_main_activity:
+    type: categorical
+    auto_fill: false
+    values:
+      - food_service
+      - food_retail
+  food_place_name:
+    type: unfeaturized
+    auto_fill: false
+  food_place_team_size:
+    type: categorical
+    auto_fill: false
+    values:
+      - 1to3
+      - 3to5
+      - over5
+  food_place_type_of_location:
+    type: categorical
+    auto_fill: false
+    values:
+      - food_service
+      - food_retail
+
+
+responses:
+  utter_apologize:
+  - text: I'm sorry to hear that
+  utter_greet:
+  - text: Hey! How are you?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_offer_to_connect_with_human:
+  - text: Would you like to be connected with a human?
+  utter_explain_main_activity:
+  - text: 'The main activity category is the category in which your company fits in
+      most prominently. You can read more about it here: https://example.com/'
+  utter_explain_location_type:
+  - text: 'The type of location is the type of location the main activity of your
+      food handling takes place in. You can read about it in more detail here: https://example.com/'
+  utter_offer_help:
+  - text: Of course! What can I help you with?
+    buttons:
+    - title: About main activity
+      payload: /asks_about_main_activity
+    - title: About type of location
+      payload: /asks_about_location_type
+  utter_ask_company_name:
+  - text: First, I'd like to know what is the name of your company?
+  utter_ask_company_country:
+  - text: In what country is the company located in?
+  utter_ask_company_address:
+  - text: What is the address of your company?
+  utter_ask_company_num_food_locations:
+  - text: How many food locations does your company have?
+    buttons:
+    - title: 1-3
+      payload: '/inform{"company_num_food_locations": "1to3"}'
+    - title: 3-5
+      payload: '/inform{"company_num_food_locations": "3to5"}'
+    - title: Over 5
+      payload: '/inform{"company_num_food_locations": "over5"}'
+  utter_ask_food_place_name:
+  - text: Great! Let's add a food handling place - what is its name?
+  utter_ask_food_place_country:
+  - text: In what country is {food_place_name} located in?
+  utter_ask_food_place_team_size:
+  - text: What is the team size of {food_place_name}?
+    buttons:
+    - title: 1-3
+      payload: '/inform{"food_place_team_size": "1to3"}'
+    - title: 3-5
+      payload: '/inform{"food_place_team_size": "3to5"}'
+    - title: Over 5
+      payload: '/inform{"food_place_team_size": "over5"}'
+  utter_ask_food_place_main_activity:
+  - text: What is the main activity of {food_place_name}?
+    buttons:
+    - title: Food service
+      payload: '/inform{"food_place_main_activity": "food_service"}'
+    - title: Food retail
+      payload: '/inform{"food_place_main_activity": "food_retail"}'
+  utter_ask_food_place_type_of_location:
+  - text: What type of location is {food_place_name}?
+    buttons:
+    - title: Hotel
+      payload: '/inform{"food_place_type_of_location": "hotel"}'
+    - title: Restaurant
+      payload: '/inform{"food_place_type_of_location": "restaurant"}'
+  utter_ask_food_place_additional_activities:
+  - text: Does {food_place_name} have any additional activities?
+    buttons:
+    - title: Catering
+      payload: '/inform{"food_place_additional_activities": "catering"}'
+    - title: Take-away
+      payload: '/inform{"food_place_additional_activities": "takeaway"}'
+  utter_submit:
+  - text: All done!
+  utter_slots_values:
+  - text: "I am going to run a restaurant search using the following parameters:\n\
+      \ - Company name: {company_name}\n - Company country: {company_country}\n -\
+      \ Company address: {company_address}\n - Number for food handling places: {company_num_food_locations}\n\
+      \ - Food handling place name: {food_place_name}\n - Food handling place country:\
+      \ {food_place_country}\n - Food handling place team size: {food_place_team_size}\n\
+      \ - Food handling place main activity: {food_place_main_activity}\n - Food handling\
+      \ place type of location: {food_place_type_of_location}\n - Food handling place\
+      \ additional acitivites: {food_place_additional_activities}\n "
+actions:
+- utter_apologize
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_offer_to_connect_with_human
+- utter_explain_main_activity
+- utter_explain_location_type
+- utter_offer_help
+- utter_ask_company_name
+- utter_ask_company_country
+- utter_ask_company_address
+- utter_ask_company_num_food_locations
+- utter_ask_food_place_name
+- utter_ask_food_place_country
+- utter_ask_food_place_team_size
+- utter_ask_food_place_main_activity
+- utter_ask_food_place_type_of_location
+- utter_ask_food_place_additional_activities
+- utter_submit
+- utter_slots_values
+forms:
+- registration_form
