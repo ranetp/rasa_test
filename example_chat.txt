@@ -45,3 +45,15 @@ Would you like to be connected with a human?
 >>> Your input ->  Yes
 
 Great, carry on!
+
+
+>>> Your input ->  I'd like to know more about the main activity of a food handling place
+The main activity category is the category in which your company fits in most prominently. You can read more about it here: https://example.com/
+Did that help you?
+
+>>> Your input ->  What about the food handling place location type?
+The type of location is the type of location the main activity of your food handling takes place in. You can read about it in more detail here: https://example.com/
+Did that help you?
+
+>>> Your input ->  Yes, thank you!
+Great, carry on!
