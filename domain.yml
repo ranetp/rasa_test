@@ -15,11 +15,11 @@ intents:
     use_entities: []
 
 entities:
-- company_name
+- country
+- organisation_name
 - company_country
 - company_address
 - company_num_food_locations
-- food_place_name
 - food_place_country
 - food_place_team_size
 - food_place_main_activity
@@ -164,28 +164,6 @@ responses:
       \ - Food handling place main activity: {food_place_main_activity}\n - Food handling\
       \ place type of location: {food_place_type_of_location}\n - Food handling place\
       \ additional acitivites: {food_place_additional_activities}\n "
-actions:
-- utter_apologize
-- utter_greet
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-- utter_offer_to_connect_with_human
-- utter_explain_main_activity
-- utter_explain_location_type
-- utter_offer_help
-- utter_ask_company_name
-- utter_ask_company_country
-- utter_ask_company_address
-- utter_ask_company_num_food_locations
-- utter_ask_food_place_name
-- utter_ask_food_place_country
-- utter_ask_food_place_team_size
-- utter_ask_food_place_main_activity
-- utter_ask_food_place_type_of_location
-- utter_ask_food_place_additional_activities
-- utter_submit
-- utter_slots_values
+
 forms:
 - registration_form
