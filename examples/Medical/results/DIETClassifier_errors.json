@@ -1,0 +1,154 @@
+[
+  {
+    "text": "I have a fever of 39 C. My name is Ralf Timur and my id is 36303050379 i think.",
+    "entities": [
+      {
+        "start": 9,
+        "end": 22,
+        "value": "fever of 39 C",
+        "entity": "medical_issue"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "Ralf Timur",
+        "entity": "personal_name"
+      },
+      {
+        "start": 59,
+        "end": 70,
+        "value": "36303050379",
+        "entity": "personal_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "medical_issue",
+        "start": 9,
+        "end": 17,
+        "value": "fever of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_id",
+        "start": 18,
+        "end": 20,
+        "value": "39",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "medical_issue",
+        "start": 21,
+        "end": 22,
+        "value": "C",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_name",
+        "start": 35,
+        "end": 45,
+        "value": "Ralf Timur",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_id",
+        "start": 59,
+        "end": 70,
+        "value": "36303050379",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My (Maria Petrov, 37411092737) runny nose is killing me",
+    "entities": [
+      {
+        "start": 4,
+        "end": 16,
+        "value": "Maria Petrov",
+        "entity": "personal_name"
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "value": "37411092737",
+        "entity": "personal_id"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "value": "runny nose",
+        "entity": "medical_issue"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "personal_name",
+        "start": 4,
+        "end": 16,
+        "value": "Maria Petrov",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_id",
+        "start": 18,
+        "end": 29,
+        "value": "37411092737",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "medical_issue",
+        "start": 31,
+        "end": 36,
+        "value": "runny",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My (Eliise Kask, 35411272720) nose runny.",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "Eliise Kask",
+        "entity": "personal_name"
+      },
+      {
+        "start": 17,
+        "end": 28,
+        "value": "35411272720",
+        "entity": "personal_id"
+      },
+      {
+        "start": 30,
+        "end": 40,
+        "value": "nose runny",
+        "entity": "medical_issue"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "personal_name",
+        "start": 4,
+        "end": 15,
+        "value": "Eliise Kask",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_id",
+        "start": 17,
+        "end": 28,
+        "value": "35411272720",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "medical_issue",
+        "start": 35,
+        "end": 40,
+        "value": "runny",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

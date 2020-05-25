@@ -1,0 +1,59 @@
+>>> Your input ->  Hello!
+Hey! How are you?
+
+>>> Your input ->  I'm fine thanks. I'd like to register an account.
+First, I'd like to know what is the name of your company?
+
+>>> Your input ->  The name of my company is Rimi.
+In what country is the company located in?
+
+>>> Your input ->  Its located in Estonia.
+What is the address of your company?
+
+>>> Your input ->  The address is Pärnu mnt 130-40
+? How many food locations does your company have?  2: 3-5 (/inform{"company_num_food_locations": "3to5"})
+
+Great! Let's add a food handling place - what is its name?
+>>> Your input ->  The name of my food handling place is Tatari Rimi
+
+In what country is Tatari Rimi located in?
+>>> Your input ->  Its in Finland
+
+? What is the team size of Tatari Rimi?  3: Over 5 (/inform{"food_place_team_size": "over5"})
+? What is the main activity of Tatari Rimi?  1: Food service (/inform{"food_place_main_activity": "food_service"})
+? What type of location is Tatari Rimi?  2: Restaurant (/inform{"food_place_type_of_location": "restaurant"})
+? Does Tatari Rimi have any additional activities?  2: Take-away (/inform{"food_place_additional_activities": "takeaway"})
+
+All done!
+I am going to run a restaurant search using the following parameters:
+ - Company name: Rimi
+ - Company country: Estonia
+ - Company address: Pärnu mnt 130-40
+ - Number for food handling places: 3to5
+ - Food handling place name: Tatari Rimi
+ - Food handling place country: Finland
+ - Food handling place team size: over5
+ - Food handling place main activity: food_service
+ - Food handling place type of location: restaurant
+ - Food handling place additional acitivites: takeaway
+
+Did that help you?
+>>> Your input ->  Sorry, no
+
+I'm sorry to hear that
+Would you like to be connected with a human?
+>>> Your input ->  Yes
+
+Great, carry on!
+
+
+>>> Your input ->  I'd like to know more about the main activity of a food handling place
+The main activity category is the category in which your company fits in most prominently. You can read more about it here: https://example.com/
+Did that help you?
+
+>>> Your input ->  What about the food handling place location type?
+The type of location is the type of location the main activity of your food handling takes place in. You can read about it in more detail here: https://example.com/
+Did that help you?
+
+>>> Your input ->  Yes, thank you!
+Great, carry on!
