@@ -18,6 +18,9 @@
 - of course
 - that sounds good
 - correct
+- thanks
+- thank you
+- thank you very much
 
 ## intent:deny
 - no
@@ -120,6 +123,30 @@
 - [34908184247](personal_id)
 - [36303210352](personal_id)
 
+<!-- Entity roles/groups https://rasa.com/docs/rasa/nlu/entity-extraction/#entities-roles-and-groups -->
+- I would like to get health insurance for traveling from [Estonia]{"entity": "country", "role": "origin"} to [Finland]{"entity": "country", "role": "destination"}.
+- I'd like to get health insurance for traveling from [Latvia]{"entity": "country", "role": "origin"} to [Lithuania]{"entity": "country", "role": "destination"} please.
+- I want to insure my health for traveling from [Poland]{"entity": "country", "role": "origin"} to [France]{"entity": "country", "role": "destination"} please.
+- I'm going to go to [Denmark]{"entity": "country", "role": "destination"} from [Sweden]{"entity": "country", "role": "origin"} and I'd like some health insurance.
+- Could I get insurance for going to [Norway]{"entity": "country", "role": "destination"} from [Germany]{"entity": "country", "role": "origin"}?
+- Is it possible to get health insurance for flight from [Russia]{"entity": "country", "role": "origin"} to [China]{"entity": "country", "role": "destination"} somehow?
+- Hello. I'm looking for health insurance, because I want to travel to [Morocco]{"entity": "country", "role": "destination"}. I am currently in [France]{"entity": "country", "role": "origin"}.
+- I am from [Belarus]{"entity": "country", "role": "origin"} and I want to go to [Spain]{"entity": "country", "role": "destination"}. Can I get some health insurance?
+- Hello I want health insurance.
+- I am going to go on a travel trip, and I'd like health insurance.
+- I'd like health insurance.
+- I want to go to [Japan]{"entity": "country", "role": "destination"}. How do i get insurance?
+- Ill depart from [Korea]{"entity": "country", "role": "origin"}
+- I'm from [Yemen]{"entity": "country", "role": "origin"}
+- I'm in [Turkey]{"entity": "country", "role": "origin"}
+- oh, im currently in [Brazil]{"entity": "country", "role": "origin"}
+- Ill travel to [United States]{"entity": "country", "role": "destination"}
+- I'd like to insure my trip to [Germany]{"entity": "country", "role": "destination"} 
+- I'm going to [Latvia]{"entity": "country", "role": "destination"}
+- I'm going to [Latvia]{"entity": "country", "role": "destination"}
+- I want to go to [United Kingdom]{"entity": "country", "role": "destination"}
+- Ill go to [Britain]{"entity": "country", "role": "destination"}
+- I am from [New Zealand]{"entity": "country", "role": "origin"}, I'd like some health insurance
 <!-- Regex for personal_id (still need to provide training examples) -->
 <!-- Regex assistance only works with CRFEntityExtractor  -->
 ## regex:personal_id

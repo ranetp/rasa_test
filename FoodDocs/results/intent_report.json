@@ -1,4 +1,18 @@
 {
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "request_registration": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
   "goodbye": {
     "precision": 1.0,
     "recall": 1.0,
@@ -6,18 +20,18 @@
     "support": 24,
     "confused_with": {}
   },
+  "asks_about_main_activity": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
   "affirm": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 7,
-    "confused_with": {}
-  },
-  "inform": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 92,
     "confused_with": {}
   },
   "asks_about_location_type": {
@@ -34,32 +48,11 @@
     "support": 6,
     "confused_with": {}
   },
-  "bot_challenge": {
+  "inform": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "request_registration": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "asks_about_main_activity": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11,
-    "confused_with": {}
-  },
-  "asks_help": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
+    "support": 92,
     "confused_with": {}
   },
   "deny": {
@@ -67,6 +60,13 @@
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 8,
+    "confused_with": {}
+  },
+  "asks_help": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
     "confused_with": {}
   },
   "accuracy": 1.0,

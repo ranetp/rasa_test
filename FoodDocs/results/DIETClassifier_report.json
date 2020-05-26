@@ -5,17 +5,17 @@
     "f1-score": 1.0,
     "support": 82
   },
-  "country": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 28
-  },
   "company_address": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 51
+  },
+  "country": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 28
   },
   "micro avg": {
     "precision": 1.0,

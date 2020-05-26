@@ -9,6 +9,7 @@ entities:
 - personal_id
 - personal_name
 - medical_issue
+- country
 
 slots:
   personal_name:
@@ -21,6 +22,10 @@ slots:
     type: unfeaturized
   doctor:
     type: unfeaturized
+  origin_country:
+    type: unfeaturized
+  destination_country:
+    type: unfeaturized
 
 responses:
   utter_greet:
@@ -32,13 +37,26 @@ responses:
   utter_goodbye:
   - text: "Bye"
     
-  utter_slots_values_medical:
+  utter_slot_values_medical:
   - text: "Hello {personal_name}! I'll try to find something about your {medical_issue}.\
          \ Your search will be recorded under your ID ({personal_id})."
+    
+  utter_slot_values_insurance:
+  - text: "Insuring you for travel from {origin_country} to {destination_country}!"
+
+  utter_ask_origin_country:
+  - text: "From what country will you depart from?"
+
+  utter_ask_destination_country:
+  - text: "To which country will you go?"
 
 actions:
 - action_search_medical_advice
 - action_suggest_medical_advice
+
+forms:
+- insurance_form
+
 
 session_config:
   session_expiration_time: 60

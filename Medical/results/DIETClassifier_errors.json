@@ -26,6 +26,7 @@
         "entity": "medical_issue",
         "start": 9,
         "end": 17,
+        "role": "O",
         "value": "fever of",
         "extractor": "DIETClassifier"
       },
@@ -33,6 +34,7 @@
         "entity": "personal_id",
         "start": 18,
         "end": 20,
+        "role": "O",
         "value": "39",
         "extractor": "DIETClassifier"
       },
@@ -40,6 +42,7 @@
         "entity": "medical_issue",
         "start": 21,
         "end": 22,
+        "role": "O",
         "value": "C",
         "extractor": "DIETClassifier"
       },
@@ -47,6 +50,7 @@
         "entity": "personal_name",
         "start": 35,
         "end": 45,
+        "role": "O",
         "value": "Ralf Timur",
         "extractor": "DIETClassifier"
       },
@@ -54,7 +58,114 @@
         "entity": "personal_id",
         "start": 59,
         "end": 70,
+        "role": "O",
         "value": "36303050379",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My fever is 39.2C. My name is Kirill Marten and my id is 38709184221 i think.",
+    "entities": [
+      {
+        "start": 3,
+        "end": 17,
+        "value": "fever is 39.2C",
+        "entity": "medical_issue"
+      },
+      {
+        "start": 30,
+        "end": 43,
+        "value": "Kirill Marten",
+        "entity": "personal_name"
+      },
+      {
+        "start": 57,
+        "end": 68,
+        "value": "38709184221",
+        "entity": "personal_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "medical_issue",
+        "start": 3,
+        "end": 8,
+        "role": "O",
+        "value": "fever",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "medical_issue",
+        "start": 12,
+        "end": 17,
+        "role": "O",
+        "value": "39.2C",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_name",
+        "start": 30,
+        "end": 43,
+        "role": "O",
+        "value": "Kirill Marten",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_id",
+        "start": 57,
+        "end": 68,
+        "role": "O",
+        "value": "38709184221",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My (Mia Vasiliev, 36112032755) nose is in the state of runnyness",
+    "entities": [
+      {
+        "start": 4,
+        "end": 16,
+        "value": "Mia Vasiliev",
+        "entity": "personal_name"
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "value": "36112032755",
+        "entity": "personal_id"
+      },
+      {
+        "start": 55,
+        "end": 64,
+        "value": "runnyness",
+        "entity": "medical_issue"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "personal_name",
+        "start": 4,
+        "end": 16,
+        "role": "O",
+        "value": "Mia Vasiliev",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "personal_id",
+        "start": 18,
+        "end": 29,
+        "role": "O",
+        "value": "36112032755",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "medical_issue",
+        "start": 52,
+        "end": 64,
+        "role": "O",
+        "value": "of runnyness",
         "extractor": "DIETClassifier"
       }
     ]
@@ -86,6 +197,7 @@
         "entity": "personal_name",
         "start": 4,
         "end": 16,
+        "role": "O",
         "value": "Maria Petrov",
         "extractor": "DIETClassifier"
       },
@@ -93,6 +205,7 @@
         "entity": "personal_id",
         "start": 18,
         "end": 29,
+        "role": "O",
         "value": "37411092737",
         "extractor": "DIETClassifier"
       },
@@ -100,6 +213,7 @@
         "entity": "medical_issue",
         "start": 31,
         "end": 36,
+        "role": "O",
         "value": "runny",
         "extractor": "DIETClassifier"
       }
@@ -132,6 +246,7 @@
         "entity": "personal_name",
         "start": 4,
         "end": 15,
+        "role": "O",
         "value": "Eliise Kask",
         "extractor": "DIETClassifier"
       },
@@ -139,6 +254,7 @@
         "entity": "personal_id",
         "start": 17,
         "end": 28,
+        "role": "O",
         "value": "35411272720",
         "extractor": "DIETClassifier"
       },
@@ -146,7 +262,30 @@
         "entity": "medical_issue",
         "start": 35,
         "end": 40,
+        "role": "O",
         "value": "runny",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'd like to insure my trip to Germany",
+    "entities": [
+      {
+        "start": 30,
+        "end": 37,
+        "value": "Germany",
+        "entity": "country",
+        "role": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "country",
+        "start": 30,
+        "end": 37,
+        "role": "origin",
+        "value": "Germany",
         "extractor": "DIETClassifier"
       }
     ]

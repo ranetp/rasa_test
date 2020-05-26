@@ -1,16 +1,9 @@
 {
-  "affirm": {
+  "greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "inform": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 83,
+    "support": 6,
     "confused_with": {}
   },
   "goodbye": {
@@ -27,11 +20,18 @@
     "support": 6,
     "confused_with": {}
   },
-  "greet": {
+  "affirm": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 8,
+    "confused_with": {}
+  },
+  "inform": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 105,
     "confused_with": {}
   },
   "accuracy": 1.0,
@@ -39,12 +39,12 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 104
+    "support": 129
   },
   "weighted avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 104
+    "support": 129
   }
 }

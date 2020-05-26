@@ -1,0 +1,18 @@
+>>> Your input ->  I'm from Estonia and I'd like to travel to Finland. Could I have health insurance?
+Insuring you for travel from Estonia to Finland!
+
+>>> Your input ->  I'm going to France and I'd like some health insurance
+From what country will you depart from?
+>>> Your input ->  From Germany
+Insuring you for travel from Germany to France!
+
+
+>>> Your input ->  Hello I am Peep Seep (id 37909030246) and I happen to have a 39.1 fever
+Hello Peep! I'll try to find something about your 39.1 fever. Your search will be recorded under your ID (37909030246).
+Analyzing your medical data.
+Here is some medical advice:
+Doctor Michael Lawson suggests that the best way to treat 39.1 fever is to take antibiotics.
+? Does this help? Or do you (Peep, 37909030246) doubt the advice of Michael Lawson? 
+>>> 2: No. I, Peep, don't trust no Michael Lawson (/goodbye)
+Bye
+Your input ->

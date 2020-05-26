@@ -1,32 +1,25 @@
-## Registration path 1 (Just for entities - I don't understand how to test forms with multile/follow up questions and don't want to waste more time on this. The docs only have an example with one question https://rasa.com/docs/rasa/user-guide/testing-your-assistant/) (C:\Users\Ranet\AppData\Local\Temp\tmptlrrmr5t\238c9332ae954a9aa589550e5cf1ac37_conversation_tests.md)
+## Registration path 1 (Just for entities - I don't understand how to test forms with multile/follow up questions and don't want to waste more time on this. The docs only have an example with one question https://rasa.com/docs/rasa/user-guide/testing-your-assistant/) (C:\Users\Ranet\AppData\Local\Temp\tmp0lxcdfhr\088d4f258f0f434aa0e7b9572a22c2f5_conversation_tests.md)
 * greet: Hello!
     - utter_greet
 * request_registration: I'm fine thanks. I'd like to register an account.
+    - slot{"company_name": "Rimi"}
+    - slot{"company_country": "Estonia"}
+    - slot{"company_address": "Pärnu mnt 130-40"}
+    - slot{"food_place_name": "Tatari Rimi"}
+    - slot{"food_place_country": "Finland"}
+    - slot{"food_place_country": "Finland"}
+    - slot{"food_place_main_activity": "food_retail"}
+    - slot{"food_place_type_of_location": "restaurant"}
+    - slot{"food_place_additional_activities": "takeaway"}
+    - slot{"food_place_team_size": "over5"}
+    - slot{"company_num_food_locations": "over5"}
     - registration_form
     - form{"name": "registration_form"}
-* form: inform: The name of my company is [Rimi](organisation_name).
-    - form: registration_form
-* form: inform: Its located in [Estonia](country).
-    - form: registration_form
-* form: inform: The address is [Pärnu mnt 130-40](company_address)
-    - form: registration_form
-* form: inform: The name of my food handling place is [Tatari Rimi](organisation_name)
-    - form: registration_form
-* form: inform: Its in [Finland](country)
-    - form{"name": null}
-    - action_listen   <!-- predicted: registration_form -->
-* affirm: Yes, thanks
-    - utter_happy
-
-
-## Ask for help negative (C:\Users\Ranet\AppData\Local\Temp\tmptlrrmr5t\238c9332ae954a9aa589550e5cf1ac37_conversation_tests.md)
-* greet: Hello!
-    - utter_greet
-* asks_about_location_type: What is the food handling place location type?
-    - utter_explain_location_type
-    - utter_did_that_help
-* deny: No, I still don't understand   <!-- predicted: asks_about_location_type: No, I still don't understand -->
-    - utter_apologize   <!-- predicted: utter_explain_location_type -->
-    - utter_offer_to_connect_with_human
+    - form: utter_slots_values   <!-- predicted: action_listen -->
+    - form: utter_did_that_help   <!-- predicted: registration_form -->
+    - form: action_listen   <!-- predicted: registration_form -->
+* form: affirm: Yes, thanks
+    - form: utter_happy -->   <!-- predicted: registration_form -->
+    - form: action_listen   <!-- predicted: registration_form -->
 
 

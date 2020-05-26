@@ -26,10 +26,14 @@
 #
 #         return []
 
-from rasa_sdk import Action
-from rasa_sdk.events import SlotSet
 import requests
 import random
+from typing import List, Text, Dict, Any, Union
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction
 
 
 class MedicalAPI:
@@ -74,7 +78,7 @@ class ActionGiveAdvice(Action):
         # Create buttons dynamically through the action
         buttons = [
             {"title": f"Yes. I, {tracker.get_slot('personal_name')}, have my absolute trust in {tracker.get_slot('doctor')}",
-             "payload": "/happy"
+             "payload": "/affirm"
             },
             {"title": f"No. I, {tracker.get_slot('personal_name')}, don't trust no {tracker.get_slot('doctor')}",
              "payload": "/goodbye"
@@ -87,3 +91,45 @@ class ActionGiveAdvice(Action):
         )
 
         return []
+
+
+class InsuranceForm(FormAction):
+    '''Example of a custom form action'''
+
+    def name(self):
+        '''Unique identifier of the form'''
+        return 'insurance_form'
+
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        '''A list of required slots that the form has to fill'''
+        return  ['origin_country', 'destination_country']
+
+
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        '''Define what the form has to do after all required slots are filled'''
+
+        dispatcher.utter_template('utter_submit', tracker)
+        return []
+
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        '''A dictionary to map required slots to
+        - an extracted entity
+        - intent: value pairs
+        - a whole message or a list of them, where a first match will be picked'''
+
+        return {
+            'origin_country': [
+                self.from_entity(entity='country', role='origin'),
+            ],
+            'destination_country': [
+                self.from_entity(entity='country', role='destination'),
+            ]
+        }
